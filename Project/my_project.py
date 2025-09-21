@@ -1,8 +1,12 @@
 import telebot
-import requests #Библиотека для отправки запросов в интернет
+import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # загружает переменные из .env
 
 # Настройки
-TELEGRAM_TOKEN = '7602005369:AAGwz6GTrzMDuu6MLEPyU_euR9ELytqJDQA'
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 
 # Инициализация бота
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
